@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Erregistratu">
+
+    <Button
+        android:id="@+id/errgstrtuBtnErregistratu"
+        android:layout_width="186dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#006bff"
+        android:text="ERREGISTRATU"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuEdtTxtPasahitza1"
+        app:layout_constraintVertical_bias="0.845" />
+
+    <EditText
+        android:id="@+id/errgstrtuEdtTxtPasahitza2"
+        android:layout_width="180dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="24dp"
+        android:hint="Zure pasahitza"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuTxtPasahitza2" />
+
+    <TextView
+        android:id="@+id/errgstrtuTxtPasahitza2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="72dp"
+        android:text="Errepikatu Pasahitza:"
+        android:textColor="#006bff"
+        app:layout_constraintStart_toEndOf="@+id/errgstrtuTxtPasahitza1"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuEdtTxtEmail" />
+
+    <EditText
+        android:id="@+id/errgstrtuEdtTxtPasahitza1"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:hint="Zure pasahitza"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuTxtPasahitza1" />
+
+    <EditText
+        android:id="@+id/errgstrtuEdtTxtEmail"
+        android:layout_width="366dp"
+        android:layout_height="49dp"
+        android:hint="user@gmail.com"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuTxtEmail"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/errgstrtuTxtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="E-Posta:"
+        android:textColor="#006bff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuEdtTxtIzena" />
+
+    <EditText
+        android:id="@+id/errgstrtuEdtTxtNAN"
+        android:layout_width="150sp"
+        android:layout_height="48sp"
+        android:hint="Zure NAN"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuTxtIzena"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/errgstrtuTxtNAN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="168dp"
+        android:text="NAN:"
+        android:textColor="#006bff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/errgstrtuTxtErregistratu"
+        android:layout_width="161dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="44dp"
+        android:text="ERREGISTRATU"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0162E8"
+        app:layout_constraintBottom_toTopOf="@+id/loginTxtErabiltzaile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <EditText
+        android:id="@+id/errgstrtuEdtTxtIzena"
+        android:layout_width="150sp"
+        android:layout_height="48sp"
+        android:hint="Zure izena"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuTxtIzena"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/errgstrtuTxtIzena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="168dp"
+        android:text="Izena:"
+        android:textColor="#006bff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/errgstrtuTxtPasahitza1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="72dp"
+        android:text="Pasahitza:"
+        android:textColor="#006bff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errgstrtuEdtTxtEmail" />
+</androidx.constraintlayout.widget.ConstraintLayout>
