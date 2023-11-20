@@ -107,7 +107,7 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             // Hurrengo lehiora pasatzen da
-                            Intent intent = new Intent(Login.this, Pantalla1.class);
+                            Intent intent = new Intent(Login.this, Gune_1_Activity.class);
 
                             String email_pasatzeko = erabiltzaile.toString();
                             String pasahitza_pasatzeko = pasahitza.toString();

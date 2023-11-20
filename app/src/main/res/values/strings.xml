@@ -2,4 +2,6 @@
     <string name="app_name">DidaktikAPP</string>
     <string name="Login_editxt_email_hint">mail@gmail.com</string>
     <string name="Login_editxt_pasahitza_hint">Zure pasahitza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
