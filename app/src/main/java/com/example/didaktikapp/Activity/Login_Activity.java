@@ -1,4 +1,4 @@
-package com.example.didaktikapp;
+package com.example.didaktikapp.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.didaktikapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseNetworkException;
@@ -20,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Login extends AppCompatActivity {
+public class Login_Activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText erabiltzaileEditText;
@@ -107,7 +108,7 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             // Hurrengo lehiora pasatzen da
-                            Intent intent = new Intent(Login.this, Gune_1_Activity.class);
+                            Intent intent = new Intent(Login_Activity.this, Gune_1_Activity.class);
 
                             String email_pasatzeko = erabiltzaile.toString();
                             String pasahitza_pasatzeko = pasahitza.toString();
@@ -127,19 +128,19 @@ public class Login extends AppCompatActivity {
 
                             if (exception instanceof FirebaseNetworkException) {
                                 String erKonexioa = "konexio errorea";
-                                Toast.makeText(Login.this, erKonexioa, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login_Activity.this, erKonexioa, Toast.LENGTH_SHORT).show();
                             } else if (exception instanceof FirebaseAuthInvalidUserException) {
                                 String erEposta = "Ez da aurkitu emaila";
                                 // Correo electrónico no encontrado en Firebase Authentication
-                                Toast.makeText(Login.this, erEposta, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login_Activity.this, erEposta, Toast.LENGTH_SHORT).show();
                             } else if (exception instanceof FirebaseAuthInvalidCredentialsException) {
                                 String erPasahitza = "Pasahitza ez du emailarekin bat";
                                 // Credenciales de inicio de sesión inválidas (correo o contraseña incorrectos)
-                                Toast.makeText(Login.this, erPasahitza, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login_Activity.this, erPasahitza, Toast.LENGTH_SHORT).show();
                             } else {
                                 String erLogin = "Email edo Pasahitza okerrak";
                                 // Otro error no manejado específicamente
-                                Toast.makeText(Login.this, erLogin, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login_Activity.this, erLogin, Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
@@ -150,7 +151,7 @@ public class Login extends AppCompatActivity {
 
 
         // Hurrengo lehiora pasatzen da
-        Intent intent = new Intent(Login.this, Erregistratu.class);
+        Intent intent = new Intent(Login_Activity.this, Erregistratu_Activity.class);
 
         //pasatuko diogu errregistratzeko ez jartzeko berriro guztia
         String email_pasatzeko = erabiltzaile.toString();

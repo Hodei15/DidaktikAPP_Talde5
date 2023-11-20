@@ -1,4 +1,4 @@
-package com.example.didaktikapp;
+package com.example.didaktikapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.didaktikapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Erregistratu extends AppCompatActivity {
+public class Erregistratu_Activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText erabiltzaileEditText;

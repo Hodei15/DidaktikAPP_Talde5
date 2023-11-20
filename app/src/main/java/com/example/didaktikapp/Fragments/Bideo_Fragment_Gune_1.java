@@ -1,4 +1,4 @@
-package com.example.didaktikapp;
+package com.example.didaktikapp.Fragments;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.didaktikapp.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Audio_Fragment_Gune_1#newInstance} factory method to
+ * Use the {@link Bideo_Fragment_Gune_1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Audio_Fragment_Gune_1 extends Fragment {
+public class Bideo_Fragment_Gune_1 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class Audio_Fragment_Gune_1 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Audio_Fragment_Gune_1() {
+    public Bideo_Fragment_Gune_1() {
         // Required empty public constructor
     }
 
@@ -34,14 +36,14 @@ public class Audio_Fragment_Gune_1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Frag2.
+     * @return A new instance of fragment Frag1.
      */
     // TODO: Rename and change types and number of parameters
-    public static Audio_Fragment_Gune_1 newInstance(String param1, String param2) {
-        Audio_Fragment_Gune_1 fragment = new Audio_Fragment_Gune_1();
+    public static Bideo_Fragment_Gune_1 newInstance(String param1, String param2) {
+        Bideo_Fragment_Gune_1 fragment = new Bideo_Fragment_Gune_1();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1,param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2,param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -59,6 +61,6 @@ public class Audio_Fragment_Gune_1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_audio_gune_1, container, false);
+        return inflater.inflate(R.layout.fragment_bideo_gune_1, container, false);
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:context=".Gune_1_Activity">
+    tools:context=".Activity.Gune_1_Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/frag_container"
-            android:name="com.example.didaktikapp.Bideo_Fragment_Gune_1"
+            android:name="com.example.didaktikapp.Fragments.Bideo_Fragment_Gune_1"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             tools:layout="@layout/fragment_bideo_gune_1" />

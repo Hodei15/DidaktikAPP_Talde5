@@ -1,4 +1,4 @@
-package com.example.didaktikapp;
+package com.example.didaktikapp.Activity;
 
 import static android.content.ContentValues.TAG;
 
@@ -10,6 +10,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.didaktikapp.Fragments.Audio_Fragment_Gune_1;
+import com.example.didaktikapp.Fragments.Bideo_Fragment_Gune_1;
+import com.example.didaktikapp.R;
 
 public class Gune_1_Activity extends AppCompatActivity {
 

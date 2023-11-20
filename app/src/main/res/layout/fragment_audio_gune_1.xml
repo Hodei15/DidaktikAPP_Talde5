@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
-    tools:context=".Audio_Fragment_Gune_1">
+    tools:context=".Fragments.Audio_Fragment_Gune_1">
 
     <!-- TODO: Update blank fragment layout -->
 
