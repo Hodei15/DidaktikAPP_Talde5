@@ -18,7 +18,7 @@ public class Gune_1_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gune_1);
 
-        Button btn_atzera = findViewById(R.id.btn_atzera);
+        Button btn_atzera =findViewById(R.id.btn_atzera);
         Button btn_aurrera = findViewById(R.id.btn_aurrera);
 
         FragmentManager fm = getSupportFragmentManager();

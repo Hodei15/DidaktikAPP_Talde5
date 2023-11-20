@@ -13,5 +13,5 @@
         android:paddingTop="20dp"
         android:text="FRAG 1"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="30sp"/>
 </FrameLayout>
