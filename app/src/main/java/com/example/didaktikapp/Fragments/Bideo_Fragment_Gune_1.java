@@ -1,5 +1,7 @@
 package com.example.didaktikapp.Fragments;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import com.example.didaktikapp.R;
 
@@ -25,6 +29,8 @@ public class Bideo_Fragment_Gune_1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private VideoView kontserbaVideo;
+    private MediaController kontroladorea;
 
     public Bideo_Fragment_Gune_1() {
         // Required empty public constructor
@@ -54,6 +60,7 @@ public class Bideo_Fragment_Gune_1 extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -63,4 +70,30 @@ public class Bideo_Fragment_Gune_1 extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bideo_gune_1, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Videoa lortu
+        kontserbaVideo = view.findViewById(R.id.KontsVideo);
+        if (kontserbaVideo != null) {
+            // URI konfiguratu gure bideorako
+            String videoPath = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.kontserbak;
+            Uri uri = Uri.parse(videoPath);
+            kontserbaVideo.setVideoURI(uri);
+            //Bideoaren kontroladorea Sortu
+            kontroladorea = new MediaController(getActivity());
+            //kontserbaVideo.setVideoPath(videoPath);
+            kontserbaVideo.setMediaController(kontroladorea);
+            kontroladorea.setAnchorView(kontserbaVideo);
+            // MediaController sortuta dagoela verifikatu videoa hasi baino lehen
+            if (kontroladorea != null) {
+                // Iniciar la reproducción del video
+                kontserbaVideo.start();
+
+            }
+        }
+    }
+
 }
