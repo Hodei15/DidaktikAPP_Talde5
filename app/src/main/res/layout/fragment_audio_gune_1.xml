@@ -1,20 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="@color/black"
     tools:context=".Fragments.Audio_Fragment_Gune_1">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/back"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="20sp"
-        android:text="FRAG 2"
-        android:textAlignment="center"
-        android:textSize="30sp"/>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="462dp"
+            android:layout_height="324dp"
+            android:paddingTop="20sp"
+            android:text="FRAG 2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_HasieraA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="Audioa hasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.482" />
+
+        <Button
+            android:id="@+id/btn_PausaA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audioa pausatu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.784"
+            app:layout_constraintStart_toEndOf="@+id/btn_HasieraA"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.482" />
+
+        <SeekBar
+            android:id="@+id/id_audioBarra"
+            android:layout_width="350dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="136dp"
+            android:progressBackgroundTint="#00BCD4"
+            android:progressTint="@color/white"
+            android:thumbTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
