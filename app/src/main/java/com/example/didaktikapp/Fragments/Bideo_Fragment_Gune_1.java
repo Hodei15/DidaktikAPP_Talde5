@@ -70,7 +70,7 @@ public class Bideo_Fragment_Gune_1 extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bideo_gune_1, container, false);
     }
-
+/*
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -95,5 +95,5 @@ public class Bideo_Fragment_Gune_1 extends Fragment {
             }
         }
     }
-
+*/
 }
