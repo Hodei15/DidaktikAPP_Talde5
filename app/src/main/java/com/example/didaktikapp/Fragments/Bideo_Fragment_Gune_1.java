@@ -100,6 +100,4 @@ public class Bideo_Fragment_Gune_1 extends Fragment {
             }
         });
     }
-
-
 }

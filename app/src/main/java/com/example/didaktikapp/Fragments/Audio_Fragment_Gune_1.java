@@ -1,15 +1,13 @@
 package com.example.didaktikapp.Fragments;
 
-import static android.content.ContentValues.TAG;
-
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
-import android.util.Log;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +15,8 @@ import android.widget.Button;
 import android.widget.SeekBar;
 
 import com.example.didaktikapp.R;
+
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -82,16 +82,27 @@ public class Audio_Fragment_Gune_1 extends Fragment {
     private Runnable runnable;
     private Handler handler = new Handler();;
     private boolean playing = false;
+    SharedPreferences prefs;
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
         btn_hasi = view.findViewById(R.id.btn_HasieraA);
         btn_pausatu = view.findViewById(R.id.btn_PausaA);
         barraAudio = view.findViewById(R.id.id_audioBarra);
-        /*String audioPath = "android.resource://"+ getActivity().getPackageManager() + "/" + R.raw.audio_kontserbak;
-        Uri uri = Uri.parse(audioPath);
-        player = MediaPlayer.create(getActivity(), uri);*/
         player = MediaPlayer.create(getActivity(), R.raw.audio_kontserbak);
+        barraAudio.setMax(player.getDuration());
+        prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                if (player != null) {
+                    int mCurrentPosition = player.getCurrentPosition();
+                    barraAudio.setProgress(mCurrentPosition);
+                }
+                handler.postDelayed(this, 100);
+            }
+        };
+        handler.postDelayed(runnable, 100);
         btn_hasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,32 +117,23 @@ public class Audio_Fragment_Gune_1 extends Fragment {
                 pause();
             }
         });
-
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                if (player != null) {
-                    int mCurrentPosition = player.getCurrentPosition();
-                    barraAudio.setProgress(mCurrentPosition);
-                }
-                handler.postDelayed(this, 100);
-            }
-        };
-        handler.postDelayed(runnable, 100);
-
         barraAudio.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (fromUser) {
                     player.seekTo(progress);
+
                 }
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
+                player.pause();
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                player.start();
+
             }
         });
 
@@ -139,14 +141,18 @@ public class Audio_Fragment_Gune_1 extends Fragment {
     }
     //audioa hasieratzeko metodoa
     private void start() {
-        if (!player.isPlaying()) {
-            //player.seekTo(audioarenposizioa);
+        if (!player.isPlaying() && !playing) {
+            player.seekTo(audioarenposizioa);
             player.start();
             playing = true;
             btn_hasi.setEnabled(false);
         }
+        //audioa geratu den lekuan hasieratzen da
+        else if (playing){
+            int position = prefs.getInt("mediaPosition",0);
+            player.seekTo(position);
+        }
     }
-
     //audioa gelditzeko metodoa
     private void pause(){
         if(player.isPlaying()){
@@ -155,11 +161,10 @@ public class Audio_Fragment_Gune_1 extends Fragment {
             playing = false;
             btn_hasi.setEnabled(true);
         }
-    }
-
-    /*public void play(View v){
-        if (player == null){
-            player = MediaPlayer.create(this, R.raw.Audio_Kontserbak);
+        try {
+            player.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }*/
+    }
 }
