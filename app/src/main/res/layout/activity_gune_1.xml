@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="725dp"
+        android:layout_height="700sp"
         android:orientation="vertical">
 
         <androidx.fragment.app.FragmentContainerView

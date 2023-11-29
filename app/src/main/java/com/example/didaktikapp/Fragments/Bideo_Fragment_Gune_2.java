@@ -1,5 +1,7 @@
 package com.example.didaktikapp.Fragments;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import com.example.didaktikapp.R;
 
@@ -25,6 +29,8 @@ public class Bideo_Fragment_Gune_2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private VideoView ArrainBideo;
+    private MediaController kontroladorea;
 
     public Bideo_Fragment_Gune_2() {
         // Required empty public constructor
@@ -62,5 +68,34 @@ public class Bideo_Fragment_Gune_2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bideo_gune_2, container, false);
+    }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Videoa lortu
+        ArrainBideo = view.findViewById(R.id.ArrainVideo);
+        if (ArrainBideo != null) {
+            // URI konfiguratu gure bideorako
+            String videoPath = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.arrain_saltzaileak;
+            Uri uri = Uri.parse(videoPath);
+            ArrainBideo.setVideoURI(uri);
+            //Bideoaren kontroladorea Sortu
+            kontroladorea = new MediaController(getActivity());
+            //kontserbaVideo.setVideoPath(videoPath);
+            ArrainBideo.setMediaController(kontroladorea);
+            kontroladorea.setAnchorView(ArrainBideo);
+            // MediaController sortuta dagoela verifikatu videoa hasi baino lehen
+            if (kontroladorea != null) {
+                // Iniciar la reproducción del video
+                ArrainBideo.start();
+            }
+        }
+        ArrainBideo.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                boolean bukatuta = true;
+            }
+        });
     }
 }

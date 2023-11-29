@@ -25,6 +25,7 @@ public class Jolasa_Fragment_Gune_1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private boolean bukatuta;
 
     public Jolasa_Fragment_Gune_1() {
         // Required empty public constructor
@@ -62,5 +63,9 @@ public class Jolasa_Fragment_Gune_1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_jolasa_gune_1, container, false);
+    }
+    public void setGune1Value(boolean gune1) {
+        //Booleanoa
+        this.bukatuta = gune1;
     }
 }
