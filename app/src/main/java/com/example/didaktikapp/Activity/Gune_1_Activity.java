@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import com.example.didaktikapp.Fragments.Audio_Fragment_Gune_1;
 import com.example.didaktikapp.Fragments.Bideo_Fragment_Gune_1;
+import com.example.didaktikapp.Fragments.Jolasa_Fragment_Gune_1;
 import com.example.didaktikapp.R;
 
 public class Gune_1_Activity extends AppCompatActivity {
@@ -47,7 +48,7 @@ public class Gune_1_Activity extends AppCompatActivity {
 
                 }
                 Log.d(TAG,"Entra frag 2");
-                fm.beginTransaction().replace(R.id.frag_container, Audio_Fragment_Gune_1.class,null)
+                fm.beginTransaction().replace(R.id.frag_container, Jolasa_Fragment_Gune_1.class,null)
                         .setReorderingAllowed(true)
                         .addToBackStack("name")
                         .commit();

@@ -1,14 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.Jolasa_Fragment_Gune_1">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:layout_height="match_parent">
 
+        <!-- Agrega DibujoView al diseño -->
+
+        <com.example.didaktikapp.Model.DibujoView
+            android:id="@+id/dibujoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#58718B"
+            android:backgroundTint="#58718B"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/img_arrain_1"
+            android:layout_width="275px"
+            android:layout_height="275px"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/pez1_sinfondo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_lata_1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/lata1_sinfondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_arrain_2"
+            android:layout_width="275px"
+            android:layout_height="275px"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/pez2_sinfondo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_arrain_1" />
+
+        <ImageView
+            android:id="@+id/img_lata_2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/lata2_sinfondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lata_1" />
+
+        <ImageView
+            android:id="@+id/img_arrain_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/pez3_sinfondo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_arrain_2" />
+
+        <ImageView
+            android:id="@+id/img_lata_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/lata3_sinfondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lata_2" />
+
+        <ImageView
+            android:id="@+id/img_arrain_4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/pez4_sinfondo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_arrain_3" />
+
+        <ImageView
+            android:id="@+id/img_lata_4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/lata4_sinfondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lata_3" />
+
+        <ImageView
+            android:id="@+id/img_arrain_5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/pez5_sinfondo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_arrain_4" />
+
+        <ImageView
+            android:id="@+id/img_lata_5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/lata5_sinfondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lata_4" />
+
+        <Button
+            android:id="@+id/btn_prueba"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_prueba"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="124dp"
+            android:src="@drawable/circulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -36,6 +36,7 @@ android {
 dependencies {
 
 
+
     //ROOM
         //falta el def si se revisa en documentacion pero no hace falta ponerlo
         implementation ("androidx.room:room-runtime:2.4.0"); //se usa el 2.4 porque el 5 no va en todos los dispositibos
