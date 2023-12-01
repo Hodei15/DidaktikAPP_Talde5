@@ -18,5 +18,7 @@ public class Erabiltzaile {
 
     @ColumnInfo(name = "email")
     public String email;
+    @ColumnInfo(name = "klasea")
+    public String klasea;
 }
 
